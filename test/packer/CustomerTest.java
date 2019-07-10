@@ -45,7 +45,7 @@ public class CustomerTest {
      */
     @Test
     public void testGetClosestAddressTo() {
-        // Maybe this should be broken int three tests.
+        // Maybe this should be broken int three tests (done).
         System.out.println("getClosestAddressTo");
         Customer testCustomer;
         
@@ -61,7 +61,11 @@ public class CustomerTest {
         testCustomer.addAddress(testAddress0);
         assertEquals(testAddress0, testCustomer.getClosestAddressTo(testDepot0));
         assertEquals(testAddress3, testCustomer.getClosestAddressTo(testDepot4));
-        
+    }
+        @Test
+    public void testGetClosestAddressTo2() {
+         System.out.println("getClosestAddressTo2");
+        Customer testCustomer;
         testCustomer = new Customer("Test Customer", testAddress1);
         assertEquals(testAddress1, testCustomer.getClosestAddressTo(testDepot0));
         assertEquals(testAddress1, testCustomer.getClosestAddressTo(testDepot4));
@@ -74,7 +78,11 @@ public class CustomerTest {
         testCustomer.addAddress(testAddress4);
         assertEquals(testAddress1, testCustomer.getClosestAddressTo(testDepot0));
         assertEquals(testAddress4, testCustomer.getClosestAddressTo(testDepot4));
-        
+    }
+        @Test
+    public void testGetClosestAddressTo3() {
+         System.out.println("getClosestAddressTo3");
+        Customer testCustomer;
         testCustomer = new Customer("Test Customer", testAddress2);
         assertEquals(testAddress2, testCustomer.getClosestAddressTo(testDepot0));
         assertEquals(testAddress2, testCustomer.getClosestAddressTo(testDepot4));
@@ -87,3 +95,5 @@ public class CustomerTest {
     }
     
 }
+    
+

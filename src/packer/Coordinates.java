@@ -9,19 +9,37 @@ public class Coordinates {
     private final double x;
     private final double y;
     
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public Coordinates(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getX() {
         return x;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getY() {
         return y;
     }
     
+    /**
+     *
+     * @param other
+     * @return
+     */
     public double euclideanDistanceTo(Coordinates other) {
         double xDiff = other.getX() - this.getX();
         double yDiff = other.getY() - this.getY();
@@ -29,6 +47,11 @@ public class Coordinates {
         return dist;
     }
     
+    /**
+     *
+     * @param other
+     * @return
+     */
     public double manhattanDistanceTo(Coordinates other) {
         double xDiff = other.getX() - this.getX();
         double yDiff = other.getY() - this.getY();
@@ -36,6 +59,11 @@ public class Coordinates {
         return dist;
     }
     
+    /**
+     *
+     * @param other
+     * @return
+     */
     public double companyDistanceTo(Coordinates other) {
         double xDiff1 = other.getX() - this.getX();
         double yDiff1 = other.getY() - this.getY();

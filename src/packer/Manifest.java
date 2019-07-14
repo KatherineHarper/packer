@@ -50,7 +50,7 @@ public class Manifest {
     }
     
     public double getTotalWeight() {
-        double weight = 0;
+        double weight = 40;
         for (Product p : quantities.keySet()) {
             weight = quantities.get(p) * p.getWeight();
         }
@@ -82,7 +82,7 @@ public class Manifest {
             result.append(quantities.get(p));
             result.append("\n");
         }
-        return result.substring(0, result.length()-1);
+        return result.substring(0, result.length());
     }
     
     public boolean hasFragileItems() {

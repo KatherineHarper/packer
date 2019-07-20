@@ -5,6 +5,7 @@
  */
 package packer;
 
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -22,38 +23,124 @@ public class BoxTest {
         Depot depot = new Depot("Main Depot", depotAddress);
      
 
-        Address testAddress1 = new Address("67 Torch Rd", "Treeline", "Mt High", "T799", new Coordinates(1102, 87));
+   
         Address testAddress2 = new Address("88 Camp Mine St", "Ridgeway", "Lowe Valley", "I998", new Coordinates(100, 34));
         Customer customer = new Customer("Andy Bravo", testAddress2);
-       // customer.addAddress();
+   
       
-     Product a1 = new Product("Alpha", 0, true, true);
+     Product a1 = new Product("Alpha", 3, true, true);
     Product a2 = new Product("Alpha", 2, true, true);
     Product a3 = new Product("Alpha", 3, false, true);
     Product a4 = new Product("Alpha", 4, true, false);
+    
+        Manifest manifest = new Manifest();
+     
+ 
+    Box box1 = new Box(customer, depot);
+ 
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+
+   
+       
+    /**
+     * Test of addProduct method, of class Box.
+     */
+    @Test
+    public void testAddProduct_Product() {
+        System.out.println("addProduct");
+        Product product = a1;
+        Box instance = box1;
+        instance.addProduct(product);
+       
+    }
+
 
 
     /**
      * Test of getLabel method, of class Box.
      */
-        @Test
-        public void getLabel() {
+    @Test
+    public void testGetLabel() {
+        System.out.println("getLabel");
+        Box instance = box1;
+        String expResult = "Andy Bravo"+ "\n" + "88 Camp Mine St"+ "\n" + "Ridgeway"+ "\n" + "Lowe Valley"+ "\n" +"I998"+"\n"+"\n" +"";
+        String result = instance.getLabel();
+        assertEquals(expResult, result);
       
-        System.out.println("getlabel");
-        
-            Box testBox1 = new Box(customer, depot);
-            System.out.println("toString");
-        assertEquals("Andy Bravo\n88 Camp Mine St\nRidgeway\nLowe Valley\n"
-                + "I998\nAlpha\n0\nHammer x 1\n" +
-"Saw x 1\n" +
-"Light Bulbs x 1\n" +
-"Ladder x 1\n" +
-"Nails x 1\n" +
-"Weedkiller x 1\n" +
-"FRAGILE", testBox1.getLabel());
+    }
+
+    /**
+     * Test of toString method, of class Box.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        Box instance = box1;
+        String expResult = "Andy Bravo"+ "\n" + "88 Camp Mine St"+ "\n" + "Ridgeway"+ "\n" + "Lowe Valley"+ "\n" +"I998"+"\n"+"\n" +"";
+        String result = instance.toString();
+        assertEquals(expResult, result);
+ 
+    }
+
+ 
+
+    /**
+     * Test of canFit method, of class Box.
+     */
+    @Test
+    public void testCanFit_Product() {
+        System.out.println("canFit");
+        Product p = a1;
+        Box instance = box1;
+        boolean expResult = false;
+        boolean result = instance.canFit(p);
+        assertEquals(expResult, result);
+     
+    }
+
+
+
+
+    /**
+     * Test of isFragile method, of class Box.
+     */
+    @Test
+    public void testIsFragile() {
+        System.out.println("isFragile");
+        Box instance = box1;
+        boolean expResult = false;
+        boolean result = instance.isFragile();
+        assertEquals(expResult, result);
        
-  
-        }
+    }
+
+    /**
+     * Test of isHazardous method, of class Box.
+     */
+    @Test
+    public void testIsHazardous() {
+        System.out.println("isHazardous");
+        Box instance = box1;
+        boolean expResult = false;
+        boolean result = instance.isHazardous();
+        assertEquals(expResult, result);
+   
+    }
 
 
     

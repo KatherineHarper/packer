@@ -10,6 +10,7 @@ import java.util.Comparator;
  */
 public class ProductWeightComparator implements Comparator<Product> {
     
+    @Override
     public int compare(Product a, Product b) {
         if (a.getWeight() < b.getWeight()) {return 1;}
         else if (a.getWeight() > b.getWeight()) {return -1;}

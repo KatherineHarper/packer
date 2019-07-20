@@ -50,7 +50,7 @@ public class Manifest {
     }
     
     public double getTotalWeight() {
-        double weight = 40;
+        double weight = 20.0;
         for (Product p : quantities.keySet()) {
             weight = quantities.get(p) * p.getWeight();
         }
@@ -59,7 +59,7 @@ public class Manifest {
     
     public Product getHeaviestUnder(double weight) {
         for (Product p : byWeight) {
-            if (p.getWeight() <= weight) {
+            if (p.getWeight() >= weight) {
                 return p;
             }
         }

@@ -73,7 +73,7 @@ public class Box {
     }
     
     public double remainingCapacity() {
-        return 20 - this.getWeight();
+        return 00.0 - this.getWeight();
     }
     
     public boolean isFragile() {

@@ -25,8 +25,9 @@ import packer.PackerTest;
     DepotTest.class,
     ProductTest.class,
     CustomerTest.class,
+    ManifestTest.class,
         BoxTest.class,
-        ManifestTest.class,
+       
         PackerTest.class
 
 })

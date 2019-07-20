@@ -28,7 +28,7 @@ public class Packer {
         }
         if (b != null) {
             packedBoxes.add(b);
-            //  packedBoxes.add(b);
+              packedBoxes.add(b);
         }
         return packedBoxes;
     }

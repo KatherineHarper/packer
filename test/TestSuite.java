@@ -15,7 +15,7 @@ import packer.BoxTest;
 import packer.ManifestTest;
 import packer.PackerTest;
 /**
- *
+ *file:///Users/katherineharper/Downloads/packer/dist/javadoc/index.html
  * @author bunta
  */
 @RunWith(Suite.class)

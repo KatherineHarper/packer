@@ -4,6 +4,10 @@ package packer;
  *
  * @author I.M.Bad
  */
+
+
+
+
 public class Coordinates {
     
     private final double x;
@@ -11,8 +15,8 @@ public class Coordinates {
     
     /**
      *
-     * @param x
-     * @param y
+     * @param x The X coordinate of this Point.
+     * @param y The Y coordinate of this Point.
      */
     public Coordinates(double x, double y) {
         this.x = x;
@@ -21,7 +25,7 @@ public class Coordinates {
 
     /**
      *
-     * @return
+     * @return X returns The X coordinate of this Point.
      */
     public double getX() {
         return x;
@@ -29,7 +33,7 @@ public class Coordinates {
 
     /**
      *
-     * @return
+     * @return y The Y coordinate of this Point.
      */
     public double getY() {
         return y;
@@ -37,8 +41,8 @@ public class Coordinates {
     
     /**
      *
-     * @param other
-     * @return
+     * @param other parameter to hold other data
+     * @return returns The euclidean Distance to
      */
     public double euclideanDistanceTo(Coordinates other) {
         double xDiff = other.getX() - this.getX();
@@ -49,8 +53,8 @@ public class Coordinates {
     
     /**
      *
-     * @param other
-     * @return
+     * @param other parameter to hold other data
+     * @return returns The manhattan Distance to
      */
     public double manhattanDistanceTo(Coordinates other) {
         double xDiff = other.getX() - this.getX();
@@ -61,8 +65,8 @@ public class Coordinates {
     
     /**
      *
-     * @param other
-     * @return
+     * @param other parameter to hold other data
+     * @return returns The company Distance To
      */
     public double companyDistanceTo(Coordinates other) {
         double xDiff1 = other.getX() - this.getX();
